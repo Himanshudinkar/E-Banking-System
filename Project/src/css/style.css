@@ -1,0 +1,91 @@
+.linking{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+.home{
+    background-image: url("/public/download\ \(1\)-overlay.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.homecontent{
+   padding-top: 90px;
+   padding-left: 40px;
+   color: white;
+}
+
+.homecontent h1{
+    font-size: 70px;
+}
+
+.homecontent Button{
+    color: white;
+    background-color: red;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+}
+
+
+.content2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.content2 h5{
+    color: red;
+    font-weight: 700;
+}
+
+.content2 h1{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+
+
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(209, 209, 209);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.animate {
+  transform: scale(1.5) rotate(360deg);
+  opacity: 0.5;
+}
+
+
+.maincard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 10px;
+    padding: 20px;
+   
+}
+
+.atm{
+    background-image: url("/public/Untitled\ design\ \(1\).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    margin-top: 50px;
+}
