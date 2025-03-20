@@ -5,12 +5,21 @@ import icone1 from "../assets/icon-21-1.png"
 import icone2 from "../assets/icon-15-1.png"
 import icone4 from "../assets/icon-2.png"
 import icone3 from "../assets/icon-14-1.png"
+import card from "../assets/card-1-2.png"
+import arrow from "../assets/icon-4.png"
+import { useNavigate } from 'react-router-dom';
 const Home = () =>{
 
     const [clicked, setClicked] = useState(false);
     const [clicked1, setClicked1] = useState(false);
     const [clicked2, setClicked2] = useState(false);
     const [clicked3, setClicked3] = useState(false);
+
+    const nav = useNavigate();
+
+    const navigate = () =>{
+      nav("/registar")
+    }
     return(
         <>
    <div className="home">
@@ -18,7 +27,7 @@ const Home = () =>{
         <h1>Enjoy zero free</h1>
         <h1>banking on your </h1>
         <h1>sb account.</h1>
-        <Button variant="danger">Register</Button>
+        <Button variant="danger" onClick={navigate}>Register</Button>
     </div>
    </div>
 
@@ -97,7 +106,29 @@ const Home = () =>{
    <section className='atmcard'>
 
     <div className="atm">
+
+      <div className="atmdesign">
+       <Card style={{ width: '24rem',marginTop:"80px",backgroundColor:"red" }}>
+      <Card.Img variant="top" src={card} style={{height:"15rem"}} />
       
+    </Card>
+
+
+     <Card style={{ width: '28rem',marginTop:"30px",backgroundColor:"rgba(255, 255, 255, 0)",border:"1px solid rgba(255, 255, 255, 0)" }}>
+      <Card.Body style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"start",gap:"10px"}}>
+        <Card.Title style={{color:"white",fontSize:"25px"}}>...CREDIT CARD</Card.Title>
+        <Card.Title style={{color:"white",fontSize:"45px",fontWeight:"600"}}>Discover Our Range of Credit Cards</Card.Title>
+        <Card.Title style={{color:"white",fontSize:"18px"}}> <img src={arrow} alt="" /> Explore Cards</Card.Title>
+        <Card.Text style={{color:"rgb(209, 209, 209)",fontFamily:""}}>
+          Business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters
+        </Card.Text>
+        <Card.Title style={{color:"white",fontSize:"20px"}}>Get Your Perfect Card Now!...</Card.Title>
+        <Button style={{backgroundColor:"red",border:"red",fontSize:"20px"}}>Rewards Cards</Button>
+        
+      </Card.Body>
+    </Card>
+
+    </div>
     </div>
 
    </section>
