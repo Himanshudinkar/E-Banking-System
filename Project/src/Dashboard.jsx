@@ -38,7 +38,7 @@ const Dashboard = () =>{
              <Nav.Link as={Link} to={"ministatement"} className='linkingdash'>Mini Statement</Nav.Link>
               <Nav.Link as={Link} to={"yourprofile"} className='linkingdash'>Your Profile</Nav.Link>
                <Nav.Link as={Link} to={"resetpassword"} className='linkingdash'>Reset Password</Nav.Link>
-               <Nav.Link  className='linkingdash' onClick={logout}>Reset Password</Nav.Link>
+               <Nav.Link  className='linkingdash' onClick={logout}>Logout</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <div className="multimg">
