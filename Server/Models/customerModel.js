@@ -23,7 +23,9 @@ const customer = new mongoose.Schema({
     },
     email:{
         type:String,
-        require:true
+        require:true,
+        unique: true,
+        lowercase:true
     },
     password:{
         type:String,
@@ -36,6 +38,9 @@ const customer = new mongoose.Schema({
     createAt:{
         type:Date,
         default:Date.now
+    },
+    acnumber:{
+        type:String,
     }
 })
 

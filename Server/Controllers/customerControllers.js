@@ -1,13 +1,15 @@
 const customerModel = require("../Models/customerModel");
 const autoPassword = require("../Midllewere/autoPassword")
+const acnumber = require("../Midllewere/accountNumber")
 const nodemailer = require("nodemailer")
 const bcrypt = require("bcryptjs")
+const jwt = require("jsonwebtoken");
 
 const registration = async(req,res) =>{
     const { fname,lname,address,city,mobile,email} = req.body;
     const photo = req.file.filename;
     const Mypass = autoPassword.autoPassword();
-
+    const Acnumber = acnumber.accountNumber();
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(Mypass, salt);
 
@@ -20,9 +22,9 @@ const registration = async(req,res) =>{
     mobile:mobile,
     email:email,
     photo:photo,
-    password:hashPassword
+    password:hashPassword,
+    acnumber:Acnumber
     })
-
 
      const transporter = nodemailer.createTransport({
         service: "gmail",
@@ -55,7 +57,7 @@ const registration = async(req,res) =>{
 const login = async(req,res) =>{
 const { email,password} = req.body;
 const User = await customerModel.findOne({email:email})
-console.log(User)
+
 try {
 
      if (!User)
@@ -69,7 +71,11 @@ try {
        return res.send({msg:"Invalid Password!"})
     }
 
-    res.status(200).send("Succesfully Login")
+    const token = await jwt.sign({id:User._id}, process.env.SECRETE_KEY, { expiresIn: '7 days' })
+    console.log(token);   
+    res.status(200).send({User:User,token:token,msg1:"Succesfully Login"});
+
+
     
 } 
 
@@ -77,7 +83,10 @@ catch (error) {
     res.status(400).send({msg:"Database Not Respond"})
 }
 
+
+
 }
+
 
 
 

@@ -5,11 +5,13 @@ import axios from "axios"
 import BASE_URL from "../Config";
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-
+import { useNavigate } from "react-router-dom";
 const Login = () =>{
   
     let [input,setInput] = useState({});
   
+    let nav = useNavigate();
+
     const handleinput = (e) =>{
         let name = e.target.name;
         let value = e.target.value;
@@ -27,9 +29,22 @@ const Login = () =>{
       try {
   
         let response = await axios.post(api,input);
+           localStorage.setItem("token" , response.data.token);
+           localStorage.setItem("fname", response.data.User.fname)
+            localStorage.setItem("lname", response.data.User.lname)
+           localStorage.setItem("email", response.data.User.email)
+           localStorage.setItem("custId", response.data.User._id)
+           localStorage.setItem("photo", response.data.User.photo)
+           localStorage.setItem("acnumber", response.data.User.acnumber)
+           localStorage.setItem("address", response.data.User.address)
+           localStorage.setItem("city", response.data.User.city)
+           localStorage.setItem("email", response.data.User.email)
+           localStorage.setItem("mobile", response.data.User.mobile)
         console.log(response.data);
-        toast.success(response.data)
+        toast.success(response.data.msg1)
         toast.warning(response.data.msg)
+
+        nav("/dashboard")
         
       } catch (error) {
         console.log(error.response.data.msg)

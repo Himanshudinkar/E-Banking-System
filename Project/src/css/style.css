@@ -5,7 +5,7 @@
 
 
 .home{
-    background-image: url("/public/download\ \(1\)-overlay.jpg");
+    background-image: url("/public/downloadone.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -82,7 +82,7 @@
 }
 
 .atm{
-    background-image: url("/public/Untitled\ design\ \(1\).png");
+    background-image: url("/public/cover.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -121,7 +121,7 @@
 }
 
 .registerform{
-     background-image: url("/public/download\ \(2\)-overlay.jpg");
+     background-image: url("/public/downloadtwo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,6 +138,10 @@
    
 }
 
+.navii{
+    background: linear-gradient(to bottom, #D87C7C, #800000);
+}
+
 .login{
      background-image: url("/public/loginbg.jpg");
     background-position: center;
@@ -146,6 +150,697 @@
     height: 30vh;
     overflow: hidden;
 }
+
+.multimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.multimg p{
+    color: gray;
+    font-size: 15px;
+}
+
+.linkingdash{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profilecard{
+    width: 700px;
+    margin: auto;
+    margin-top: 50px;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.atm-machine {
+  width: 200px;
+  height: 180px;
+  background: #222;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.atm-screen {
+  width: 90%;
+  height: 40px;
+  background: #0f0;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.cash {
+  width: 100px;
+  height: 50px;
+  background: green;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  animation: cashOut 1s infinite;
+}
+
+@keyframes cashOut {
+  0% { bottom: -50px; opacity: 0; }
+  50% { bottom: -10px; opacity: 1; }
+  100% { bottom: -50px; opacity: 0; }
+}
+
+/* ✅ Header Section */
+.bank-header {
+  background: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.bank-name {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.bank-tagline {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* ✅ Transaction Section */
+.transaction-card {
+  width: 400px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.input-style {
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: 0px 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* ✅ ATM Animation */
+.atm-machine {
+  width: 200px;
+  height: 170px;
+  background: #222;
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  margin-top: -20px;
+}
+
+.atm-screen {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.cash {
+  width: 100px;
+  height: 50px;
+  background: green;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  animation: cashOut 1s infinite;
+}
+
+@keyframes cashOut {
+  0% { bottom: -50px; opacity: 0; }
+  50% { bottom: -10px; opacity: 1; }
+  100% { bottom: -50px; opacity: 0; }
+}
+
+/* ✅ Information Section */
+.info-section {
+  background: #f5f5f5;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.info-section h4 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.info-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-section li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.info-section p {
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+}
+
+
+/* General container styling */
+.withdraw-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding-bottom: 20px;
+}
+
+/* Bank Header */
+.withdraw-bank-header {
+  background-color: #1e3a8a; /* Dark Blue */
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.withdraw-bank-name {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.withdraw-bank-tagline {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* Transaction Card */
+.withdraw-transaction-card {
+  width: 380px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 22px;
+}
+
+.withdraw-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+/* Input Field */
+.withdraw-input-style {
+  height: 45px;
+  font-size: 18px;
+  border: 2px solid #1e3a8a;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Withdraw Button */
+.withdraw-submit-btn {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #2563eb; /* Soft Blue */
+  color: white;
+  border: none;
+  transition: all 0.3s;
+}
+
+.withdraw-submit-btn:hover {
+  background-color: #1e40af;
+}
+
+/* ATM Animation */
+.withdraw-atm-machine {
+  width: 300px;
+  height: 180px;
+  background: linear-gradient(135deg, #374151, #4b5563); /* Grey */
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.withdraw-atm-screen {
+  font-size: 18px;
+  background: black;
+  color: #0f0;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Cash Animation */
+.withdraw-cash {
+  width: 100px;
+  height: 50px;
+  background: linear-gradient(45deg, #22c55e, #16a34a); /* Green Notes */
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  animation: withdrawCash 1.5s infinite alternate;
+}
+
+@keyframes withdrawCash {
+  0% {
+    bottom: -20px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 10px;
+    opacity: 1;
+  }
+}
+
+/* Info Section */
+.withdraw-info-section {
+  width: 80%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.withdraw-info-section h4 {
+  color: #1e3a8a;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.withdraw-info-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.withdraw-info-section ul li {
+  padding: 6px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.withdraw-info-section p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2563eb;
+  text-align: center;
+}
+
+
+/* Background Container */
+.balance-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f1efef, #1e1e1e);
+}
+
+/* Balance Card */
+.balance-card {
+  width: 380px;
+  background: #222;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0px 10px 25px rgba(255, 215, 0, 0.3);
+  border: 2px solid gold;
+  transition: transform 0.3s ease;
+}
+
+.balance-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.balance-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: gold;
+  margin-bottom: 15px;
+}
+
+/* Balance Amount */
+.balance-amount {
+  font-size: 38px;
+  font-weight: bold;
+  color: #00ffcc;
+  margin-top: 10px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Info Section */
+.balance-info {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 15px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Background */
+.balance-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* Header */
+.balance-header {
+  width: 100%;
+  text-align: center;
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 10px 10px;
+}
+
+/* Balance Card */
+.balance-card {
+  width: 350px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #007bff;
+}
+
+/* Balance Title */
+.balance-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* Balance Amount */
+.balance-amount {
+  font-size: 38px;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 10px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Footer */
+.balance-footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Top */
+.footer-top h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.footer-top p {
+  font-size: 14px;
+  font-style: italic;
+  color: #333;
+}
+
+/* Footer Bottom */
+.footer-bottom p {
+  font-size: 13px;
+  color: #666;
+  margin-top: 5px;
+}
+
+
+.account-statement-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.account-statement-header {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+}
+
+.account-balance {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28a745;
+  margin: 20px 0;
+}
+
+.statement-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.statement-table th,
+.statement-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.statement-table th {
+  background: #007bff;
+  color: white;
+}
+
+.statement-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.statement-table tr:hover {
+  background: #f1f1f1;
+}
+
+.account-statement-footer {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 0 0 8px 8px;
+  margin-top: 20px;
+}
+
+
+.mini-statement-container {
+    width: 80%;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.mini-statement-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.mini-statement-filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-picker label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.date-picker input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.mini-statement-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.mini-statement-btn:hover {
+    background-color: #218838;
+}
+
+.mini-statement-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.mini-statement-table th, 
+.mini-statement-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.mini-statement-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.mini-statement-footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Reset Password Container */
+.reset-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f5f7fa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.reset-password-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Form */
+.reset-password-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.reset-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Input Fields */
+.reset-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  transition: border 0.3s ease;
+}
+
+.reset-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button */
+.reset-button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.reset-button:hover {
+  background: #0056b3;
+}
+
 
 @media (max-width: 768px){
 
@@ -189,5 +884,12 @@
     background-size: cover;
     height: 20vh;
     overflow: hidden;
+}
+
+.profilecard{
+    width: auto;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 }
