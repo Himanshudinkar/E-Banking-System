@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import loogo from "./assets/logo.png"
 import { Link, Outlet, useNavigate } from 'react-router-dom';
+import BASE_URL from './Config';
 
 const Dashboard = () =>{
  
@@ -42,7 +43,7 @@ const Dashboard = () =>{
           </Nav>
         </Navbar.Collapse>
         <div className="multimg">
-        <Navbar.Brand href="#"><img src={`http://localhost:8080/uploads/${photo}`} alt="" style={{width:"45px",height:"45px",borderRadius:"50%"}} /></Navbar.Brand>
+        <Navbar.Brand href="#"><img src={`${BASE_URL}/uploads/${photo}`} alt="" style={{width:"45px",height:"45px",borderRadius:"50%"}} /></Navbar.Brand>
         <p>{fname} {lname}</p>
       
         </div>
